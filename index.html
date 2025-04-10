@@ -225,6 +225,42 @@
       50% { transform: translateY(10px); }
     }
 
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111827; /* dark mode style */
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li a {
+      color: #f9fafb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar li a:hover {
+      color: #38bdf8; /* sky blue on hover */
+    }
+
+/* Add top padding so content doesn't hide under nav */
+body {
+  padding-top: 80px;
+}
+
+
   </style>
 </head>
 <body>
@@ -236,6 +272,17 @@
     <span style="left:70%; animation-delay: 4s;"></span>
     <span style="left:90%; animation-delay: 2s;"></span>
   </div>
+  
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">about</a></li>
+      <li><a href="#certs">Project</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
 
   <header class="hero">
     <div class="overlay">
@@ -252,7 +299,7 @@
     <p>I’m a cloud-native enthusiast passionate about building scalable infrastructure, automation, and delivering efficient DevOps solutions.</p>
   </section>
 
-  <section>
+  <section id="Project">
     <h2>Projects</h2>
     <ul>
       <li><strong>⚙️ EKS Observability Stack:</strong> Prometheus, Grafana, and Datadog integration with Helm</li>
@@ -261,7 +308,7 @@
     </ul>
   </section>
   
-  <section>
+  <section id="Blog">
   <h2>Latest Blog</h2>
   <div style="background: #1e293b; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);">
     <h3 style="margin-bottom: 10px;">
@@ -276,7 +323,7 @@
   </div>
 </section>
 
-<section>
+<section id="Certifications">
   <h2>Certifications</h2>
   <p style="text-align: center; margin-bottom: 20px;">
     View all my certifications on 
@@ -390,7 +437,7 @@
 </style>
 
 
-  <section>
+  <section id="Contact">
     <h2>Contact</h2>
     <p>GitHub: <a href="https://github.com/DevOpShivank" target="_blank">Shivank</a></p>
     <p>Email: <a href="mailto:devshivops@gmail.com">devshivops@gmail.com</a></p>
