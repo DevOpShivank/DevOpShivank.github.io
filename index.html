@@ -156,6 +156,75 @@
       color: #334155;
       line-height: 1.2;
     }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1548092372-0d1bd40894a3'); /* Tech wallpaper */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 9999px;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .typewriter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #fff;
+      width: 0;
+      animation: typing 2.5s steps(30, end) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: white }
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #f1f5f9;
+    }
+
+    .scroll-down {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
   </style>
 </head>
 <body>
@@ -168,11 +237,15 @@
     <span style="left:90%; animation-delay: 2s;"></span>
   </div>
 
-  <header>
-    <img src="me.jpg" alt="Profile Picture" class="profile-pic" />
-    <h1 class="typewriter">Hi, I'm Shivank</h1>
-    <p>Cloud Engineer | DevOps | AWS | Kubernetes | CI/CD</p>
+  <header class="hero">
+    <div class="overlay">
+      <img src="me.jpg" alt="Profile Picture" class="profile-pic" />
+      <h1 class="typewriter">Hi, I'm Shivank</h1>
+      <p>Cloud Engineer | DevOps | AWS | Kubernetes | CI/CD</p>
+      <a href="#certs" class="scroll-down">&#x25BC;</a>
+    </div>
   </header>
+
 
   <section>
     <h2>About Me</h2>
