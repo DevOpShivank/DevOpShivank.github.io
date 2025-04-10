@@ -120,6 +120,27 @@
       0% { transform: translateY(0) translateX(0); }
       100% { transform: translateY(-1000px) translateX(300px); }
     }
+    .certs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .cert {
+      text-align: center;
+      width: 120px;
+    }
+
+    .cert img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #1e293b;
+      padding: 8px;
+    }
   </style>
 </head>
 <body>
@@ -175,8 +196,8 @@
       Credly 🔗
     </a>
   </p>
-  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: center;">
-
+  <div class="certs">
+    <div class="cert">
       <!-- AWS SAP -->
     <div style="text-align: center; max-width: 150px;">
       <img src="sap.png" alt="AWS SAP" width="100" />
@@ -184,49 +205,49 @@
     </div>
 
     <!-- AWS DEA -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="de.png" alt="AWS DEA" width="100" />
       <p>AWS Data Engineer – Associate</p>
     </div>
 
     <!-- AWS SAA -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="saa.png" alt="AWS SAA" width="100" />
       <p>AWS Solutions Architect – Associate</p>
     </div>
 
     <!-- AWS Developer Associate -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="sad.png" alt="AWS Developer" width="100" />
       <p>AWS Developer – Associate</p>
     </div>
 
     <!-- AWS SysOps Associate -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="soo.png" alt="AWS SysOps" width="100" />
       <p>AWS SysOps Administrator – Associate</p>
     </div>
 
     <!-- CKA -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="logo_cka_whitetext.png" alt="CKA" width="100" />
       <p>Certified Kubernetes Administrator (CKA)</p>
     </div>
 
     <!-- Databricks Platform Architect -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="daws.svg" alt="Databricks Architect" width="100" />
       <p>Databricks Platform Architect</p>
     </div>
 
     <!-- Databricks Lakehouse Fundamentals -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="dal.png" alt="Lakehouse Fundamentals" width="100" />
       <p>Lakehouse Fundamentals</p>
     </div>
 
     <!-- Terraform Associate -->
-    <div style="text-align: center; max-width: 150px;">
+    <div class="cert">
       <img src="ta.png" alt="Terraform" width="100" />
       <p>Terraform Associate</p>
     </div>
