@@ -120,31 +120,41 @@
       0% { transform: translateY(0) translateX(0); }
       100% { transform: translateY(-1000px) translateX(300px); }
     }
-    .certs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 30px;
-      margin-top: 30px;
+      justify-items: center;
+      align-items: center;
+      margin: 50px auto;
+      max-width: 900px;
+      padding: 20px;
     }
 
     .cert {
       text-align: center;
-      width: 120px;
     }
 
     .cert img {
       width: 100px;
       height: 100px;
       object-fit: contain;
-      border-radius: 10px;
-      background-color: #f8fafc;
-      padding: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
+
     .cert img:hover {
       transform: scale(1.1);
+    }
+
+    .cert p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
     }
   </style>
 </head>
@@ -201,7 +211,7 @@
       Credly 🔗
     </a>
   </p>
-  <div class="certs">
+  <div class="cert-grid">
     <div class="cert">
       <!-- AWS SAP -->
     <div style="text-align: center; max-width: 150px;">
