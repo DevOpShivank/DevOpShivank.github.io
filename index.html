@@ -120,26 +120,63 @@
       0% { transform: translateY(0) translateX(0); }
       100% { transform: translateY(-1000px) translateX(300px); }
     }
-    .certs {
+    hex-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+      gap: 24px;
+      padding: 40px 20px;
     }
 
-    .cert {
-      text-align: center;
+    .hex {
       width: 120px;
+      height: 69.28px;
+      background-color: transparent;
+      position: relative;
+      margin: 34.64px 10px;
     }
 
-    .cert img {
-      width: 100px;
-      height: 100px;
+    .hex:before,
+    .hex:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+    }
+
+    .hex:before {
+      bottom: 100%;
+      border-bottom: 34.64px solid #f1f5f9;
+    }
+
+    .hex:after {
+      top: 100%;
+      border-top: 34.64px solid #f1f5f9;
+    }
+
+    .hex-in {
+      width: 120px;
+      height: 69.28px;
+      background: #f1f5f9;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hex-in img {
+      width: 60%;
+      height: 60%;
       object-fit: contain;
-      border-radius: 8px;
-      background: #1e293b;
-      padding: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .hex-in:hover img {
+      transform: scale(1.15);
     }
   </style>
 </head>
@@ -196,12 +233,13 @@
       Credly 🔗
     </a>
   </p>
-  <div class="certs">
-    <div class="cert">
+  <div class="hex-grid">
+    <div class="hex">
+      <div class="hex-in">
       <!-- AWS SAP -->
-    <div style="text-align: center; max-width: 150px;">
-      <img src="sap.png" alt="AWS SAP" width="100" />
+        <img src="sap.png" alt="AWS SAP" width="100" />
       <p>AWS Solutions Architect – Professional</p>
+          </div>
     </div>
 
     <!-- AWS DEA -->
